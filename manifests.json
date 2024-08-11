@@ -1,0 +1,8 @@
+{
+  "manifests": [
+    {
+      "prefix": "00",
+      "description": "A set of kubernetes manifest files where a persistent volume is created backed by an azure disk. This persistent volume is then used in a persistent volume claim by explicitly specifying the persistent volume name in the volumeName field. Finally, this persistent volume claim is used in a pod definition. The pod definition specifies the persistent volume claim to be used by specifying the persistentVolumeClaim spec section."
+    }
+  ]
+}
