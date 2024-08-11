@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redischecker
+  labels:
+    app: redischecker-app
+    component: redischecker-app
+spec:
+  containers:
+    - image: REPLACEWITHYOURACR.azurecr.io/redischecker:latest
+      imagePullPolicy: Always
+      name: worker
+      env:
+      - name: "ASPNETCORE_ENVIRONMENT"
+        value: "QA"
+      - name: "DOTNET_ENVIRONMENT"
+        value: "QA"
+      - name: "RedisConnectionString"
+        value: "redis-svc:6379"
