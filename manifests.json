@@ -2,7 +2,11 @@
   "manifests": [
     {
       "prefix": "00",
-      "description": "A set of kubernetes manifest files where a persistent volume is created backed by an azure disk. This persistent volume is then used in a persistent volume claim by explicitly specifying the persistent volume name in the volumeName field. Finally, this persistent volume claim is used in a pod definition. The pod definition specifies the persistent volume claim to be used by specifying the persistentVolumeClaim spec section."
+      "description": "A set of kubernetes manifest files which demonstrates how a perisisten volume claim can be used. In this example, a persistent volume is created backed by an azure disk. This persistent volume is then used in a persistent volume claim by explicitly specifying the persistent volume name in the volumeName field. Finally, this persistent volume claim is used in a pod definition. The pod definition specifies the persistent volume claim to be used by specifying the persistentVolumeClaim spec section."
+    },
+    {
+      "prefix": "01",
+      "description": "A set of kubernetes manifest files which demonstrates how a pod can communicate with another pod. In this example, a pod that runs redis is created. This particular example does not use statefulsets for the redis pod though. A service is also created that would expose the redis service internally within the cluster using a ClusterIP. Then, a pod that runs a .net core worker is created that communicates with the redis pod using the service name and the port number."
     }
   ]
 }
