@@ -7,6 +7,14 @@
     {
       "prefix": "01",
       "description": "A set of kubernetes manifest files which demonstrates how a pod can communicate with another pod. In this example, a pod that runs redis is created. This particular example does not use statefulsets for the redis pod though. A service is also created that would expose the redis service internally within the cluster using a ClusterIP. Then, a pod that runs a .net core worker is created that communicates with the redis pod using the service name and the port number."
+    },
+    {
+      "prefix": "02",
+      "description": "A set of kubernetes manifest files which demonstrates how a cron job can be created and run using a .net core worker. In this example, the worker simply prints the environment variables and exits."
+    },
+    {
+      "prefix": "03",
+      "description": "A set of kubernetes manifest files which demonstrates stateful sets. In this example a MySQL server is setup with 3 replicas."
     }
   ]
 }
